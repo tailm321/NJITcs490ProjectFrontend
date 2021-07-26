@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="examGrade.js" type="text/JavaScript"></script>
+        <script>
+            window.onload = function() {
+                getExam();
+            }
+        </script>
+        <link href="front.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>
+            <div class="center">
+                <div id="examName">
+                </div>
+                <input type="button" class="button" onclick="location.href='frontIns.html';" value="Back">
+            </div>
+        </h1>
+        <div class="center">
+            <table>
+                <tr>
+                    <td rowspan="12"><label id="ques"></label><br><textarea id="ans" class="ansTextBox" readonly></textarea></td>
+                </tr>
+                <tr>
+                    <th>Proper header</th>
+                    <td id="hdr"></td>
+                    <td id="hdrTest"></td>
+                    <td id="hdrArg"></td>
+                    <td id="hdrScore"><input id="hdrInput" type="number" min="-100" max="100" oninput="calcTotal()"></td>
+                </tr>
+                <tr>
+                    <th>Use of colon</th>
+                    <td id="cln"></td>
+                    <td id="clnTest"></td>
+                    <td id="clnArg"></td>
+                    <td id="clnScore"><input id="clnInput" type="number" min="-100" max="100" oninput="calcTotal()"></td>
+                </tr>
+                <tr>
+                    <th>Constraint</th>
+                    <td id="con"></td>
+                    <td id="conTest"></td>
+                    <td id="conArg"></td>
+                    <td id="conScore"><input id="conInput" type="number" min="-100" max="100" oninput="calcTotal()"></td>
+                </tr>
+                <tr>
+                    <th>Testcase 1</th>
+                    <td id="tc1"></td>
+                    <td id="tc1Test"></td>
+                    <td id="tc1Arg"></td>
+                    <td id="tc1Score"><input id="tc1Input" type="number" min="-100" max="100" oninput="calcTotal()"></td>
+                </tr>
+                <tr>
+                    <th>Testcase 2</th>
+                    <td id="tc2"></td>
+                    <td id="tc2Test"></td>
+                    <td id="tc2Arg"></td>
+                    <td id="tc2Score"><input id="tc2Input" type="number" min="-100" max="100" oninput="calcTotal()"></td>
+                </tr>
+                <tr>
+                    <th>Testcase 3</th>
+                    <td id="tc3"></td>
+                    <td id="tc3Test"></td>
+                    <td id="tc3Arg"></td>
+                    <td id="tc3Score"><input id="tc3Input" type="number" min="-100" max="100" oninput="calcTotal()"></td>
+                </tr>
+                <tr>
+                    <th>Testcase 4</th>
+                    <td id="tc4"></td>
+                    <td id="tc4Test"></td>
+                    <td id="tc4Arg"></td>
+                    <td id="tc4Score"><input id="tc4Input" type="number" min="-100" max="100" oninput="calcTotal()"></td>
+                </tr>
+                <tr>
+                    <th>Testcase 5</th>
+                    <td id="tc5"></td>
+                    <td id="tc5Test"></td>
+                    <td id="tc5Arg"></td>
+                    <td id="tc5Score"><input id="tc5Input" type="number" min="-100" max="100" oninput="calcTotal()"></td>
+                </tr>
+                <tr>
+                    <th>Testcase 6</th>
+                    <td id="tc6"></td>
+                    <td id="tc6Test"></td>
+                    <td id="tc6Arg"></td>
+                    <td id="tc6Score"><input id="tc6Input" type="number" min="-100" max="100" oninput="calcTotal()"></td>
+                </tr>
+                <tr>
+                    <th colspan="4">Bonus Points</th>
+                    <td id="ptsBonus"><input id="bonusInput" type="number" min="-100" max="100" oninput="calcTotal()"></td>
+                <tr>
+                    <th colspan="4">Total Points</th>
+                    <td id="ptsTotal"><input id="ptsInput" type="number" readonly></td>
+                </tr>
+                <tr>
+                    <th>Instructor Comment</th>
+                    <td colspan="5" id="comment"><input id="comInput" style="width: 100%" type="text"></td>
+                </tr>
+            </table><br>
+            
+            <input type="button" id="prev" class="button" onclick="prevQues();" value="Prev">
+            <input type="button" id="next" class="button" onclick="nextQues();" value="Next">
+            <input type="button" class="button" onclick="gradeQues();addComm();" value="Submit Changes">
+        </div>
+    </body>
+</html>

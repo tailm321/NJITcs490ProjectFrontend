@@ -1,0 +1,71 @@
+<html>  
+  <head>
+    <meta charset="utf-8">
+    <script src="examMake.js" type="text/JavaScript"></script>
+    <script>
+        window.onload = function() {
+            getCats();
+        }
+    </script>
+    <link href="front.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>
+    Description:
+    </h1>
+    <div class="center">
+    
+      <form id="quesInfo">
+      
+        <p>Question Name: </p>
+        <input type="text" id="quesName" placeholder="Name of the Question"><br>
+        
+        <p>Description: </p>
+        <textarea id="quesDesc" class="bigTextBox" placeholder="Type your question here. Example: Write a function that takes an integer, 5 and doubles it. Print the resulting answer."></textarea><br>
+        
+        Select the difficulty of the question.
+        <select id="difficulty">
+          <option value="">Select Difficulty</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select><br>
+        
+        Select the type of question.
+        <select id="categories">
+          <option value="">Select Category</option>
+          <option value="math">Math</option>
+          <option value="string">Strings</option>
+          <option value="loops">Loops</option>
+        </select><br>
+        
+        Select the constraint (if any).
+        <select id="constraints">
+          <option value="">None</option>
+          <option value="for">For Loop</option>
+          <option value="while">While Loop</option>
+          <option value="print">Print</option>
+        </select><br>
+        
+        Add the arguments (Min 2, Max 6, space each one out. Ex. 1 2 3 4)
+        <input type="text" id="arguments"><br>
+        
+        Add testcases corresponding to arguments (Ex. 2 4 6 8):
+        <input type="text" id="testcases" class="testcases">
+        <!--<div id="testCases">
+          
+        </div><br>
+        <input type="button" id="addTc" class="button" onclick="addTestCase()" value="Add testcase"><br>-->
+        
+      </form><br>
+      
+      <input type="button" class="button" onclick="location.href='examMake.html';" value="Back">
+      <input type="button" class="button" onclick="createQues()" value="Create question">
+      
+      <div id="confMsg">
+      
+      </div>
+      
+    </div>
+  </body>
+</html>

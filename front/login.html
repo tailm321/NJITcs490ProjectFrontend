@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="login.js" type="text/JavaScript"></script>
+        <link href="front.css" rel="stylesheet">
+        <title>Login</title>
+        <style>
+          body {
+            background-image: url("njitbackdrop.jpg");
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+          }
+        </style>
+  	</head>
+    <body>
+        <div class="loginbox">
+            <form class="loginform">
+              <br>
+              <h1>Login</h1>
+              <h3>UCID</h3>
+              <input type="text" id="ucid" name="ucid">
+              <h3>Password</h3>
+              <input type="password" id="pass" name="pass"><br><br>
+              <!--this button will send this form's data to be handled by javascript function-->
+              <input type="button" class="button" onclick="loginFunc(this.form)" value="Login">
+            </form>
+            <!--this will change to reflect response sent back from backend-->
+            <div id="loginMsg">
+          
+            </div>
+        </div>
+    </body>
+</html>

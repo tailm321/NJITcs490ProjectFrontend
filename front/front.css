@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #A9BCF5;
+}
+table, th, td {
+    border: 1px solid black;
+}
+input[for$="Input"]{
+    width: 40px;
+}
+.loginbox {
+  width: 240px;
+  height: 360px;
+  top: 50%;
+  left: 50%;
+  position: absolute;      
+  text-align: center;
+  transform: translate(-50%, -50%);  
+  border-radius: 6px; 
+  background-color: white;   
+}
+.lefthalf {
+  float: left;
+  width: 50%;  
+  height: 100%;
+  background-color: #F2DEDF;
+}
+.righthalf {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: #EFEFEF;
+}
+.queshalf {
+  float: left;
+  width: 50%;
+}
+.ptshalf {
+  float: left;
+  width: 50%;
+}
+/* handles things that need centering */ 
+.center {
+  width: 50%;
+  margin: auto;
+}
+.button {
+  background-color: darkred;
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: red;
+}
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.bigTextBox {
+  width: 100%;
+  height: 140px;
+  padding: 4px;
+}
+.ansTextBox {
+  width: 100%;
+  height: 240px;
+}
+.newQues {
+  width: 100%;
+  height: 30px;
+}
+.points {
+  width: 100%;
+  height: 30px;
+}

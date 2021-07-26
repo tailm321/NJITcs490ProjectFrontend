@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="examMake.js" type="text/JavaScript"></script>
+        <script>
+            window.onload = function() {
+                updateQues();
+                getCats();
+                addExamQues();
+            }
+        </script>
+        <link href="front.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="lefthalf">
+            <label for="examName">Exam Name:</label>
+            <input type="text" id="examName" name="examName" placeholder="Exam Name">
+            <input type="button" id="addQues" class="button" onclick="addExamQues()" value="Add another question to exam"><br>
+            
+            <div id="examQues" class="queshalf">
+                
+            </div>
+            
+            <div id="points" class="ptshalf">
+            
+            </div><br>
+            
+            <input type="button" class="button" onclick="location.href='frontIns.html';" value="Back">
+            <input type="button" class="button" onclick="createExam()" value="Finalize Exam">
+            
+            <div id="examConf">
+                
+            </div>
+        </div>
+            
+            
+        <div class="righthalf">
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty" onchange="updateQues()">
+                <option value="" selected>All</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <label for="categories">Category</label>
+            <select id="categories" onchange="updateQues()">
+                <option value="" selected>All</option>
+                <option value="math">Math</option>
+                <option value="strings">Strings</option>
+                <option value="loops">Loops</option>
+            </select><br>
+            
+            <input type="text" id="search" placeholder="Search keywords:">
+            <input type="button" class="button" onclick="updateQues()" value="Search">
+            
+            <input type="button" class="button" onclick="location.href='quesMake.html';" value="Create new question"> 
+        
+            <div class="questions">
+                <ol id="quesList">
+            
+                </ol>
+            </div>
+            
+        </div>
+    </body>
+</html>

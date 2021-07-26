@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="examReview.js" type="text/JavaScript"></script>
+        <script>
+            window.onload = function() {
+                getExam();
+            }
+        </script>
+        <link href="front.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>
+            <div class="center">
+                <div id="examName">
+                </div>
+                <input type="button" class="button" onclick="location.href='frontStu.html';" value="Back">
+            </div>
+        </h1>
+        <div class="center">
+            <table>
+                <tr>
+                    <td rowspan="13"><label id="ques"></label><br><textarea id="ans" class="ansTextBox" readonly></textarea></td>
+                </tr>
+                <tr>
+                    <td id="hdr"></td>
+                    <td id="hdrRes"></td>
+                    <td id="hdrScore"><input id="hdrInput" type="number" readonly></td>
+                </tr>
+                <tr>
+                    <td id="cln"></td>
+                    <td id="clnRes"></td>
+                    <td id="clnScore"><input id="clnInput" type="number" readonly></td>
+                </tr>
+                <tr>
+                    <td id="con"></td>
+                    <td id="conRes"></td>
+                    <td id="conScore"><input id="conInput" type="number" readonly></td>
+                </tr>
+                <tr>
+                    <td id="tc1"></td>
+                    <td id="tc1Res"></td>
+                    <td id="tc1Score"><input id="tc1Input" type="number" readonly></td>
+                </tr>
+                <tr>
+                    <td id="tc2"></td>
+                    <td id="tc2Res"></td>
+                    <td id="tc2Score"><input id="tc2Input" type="number" readonly></td>
+                </tr>
+                <tr>
+                    <td id="tc3"></td>
+                    <td id="tc3Res"></td>
+                    <td id="tc3Score"><input id="tc3Input" type="number" readonly></td>
+                </tr>
+                <tr>
+                    <td id="tc4"></td>
+                    <td id="tc4Res"></td>
+                    <td id="tc4Score"><input id="tc4Input" type="number" readonly></td>
+                </tr>
+                <tr>
+                    <td id="tc5"></td>
+                    <td id="tc5Res"></td>
+                    <td id="tc5Score"><input id="tc5Input" type="number" readonly></td>
+                </tr>
+                <tr>
+                    <td id="tc6"></td>
+                    <td id="tc6Res"></td>
+                    <td id="tc6Score"><input id="tc6Input" type="number" readonly></td>
+                </tr>
+                <tr>
+                    <th colspan="2">Bonus Points</th>
+                    <td id="ptsBonus"><input id="bonusInput" type="number" readonly></td>
+                <tr>
+                <tr>
+                    <th colspan="2">Total Points</th>
+                    <td id="ptsTotal"><input id="ptsInput" type="number" readonly></td>
+                </tr>
+                <tr>
+                    <th>Instructor Comment</th>
+                    <td colspan="5" id="comment"><input id="comInput" type="text" style="width: 100%;" readonly></td>
+                </tr>
+            </table><br>
+            
+            <input type="button" id="prev" class="button" onclick="prevQues();" value="Prev">
+            <input type="button" id="next" class="button" onclick="nextQues();" value="Next">
+        </div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="frontIns.js" type="text/JavaScript"></script>
+        <script>
+            window.onload = function() {
+                getExams();
+            }
+        </script>
+        <link href="front.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Welcome Instructor <input type="button" class="button" onclick="location.href='login.html';" value="Log Out">
+      
+        </h1>
+        <div class="lefthalf">
+            <div class="center">
+                Select the exam to enable. <br>
+                <select id="examList">
+                
+                </select>
+                <input type="button" class="button" onclick="enableExam()" value="Enable Exams">
+            </div>
+            <div class="center">
+                Grade the student's exams.<br>
+                <input type="button" class="button" onclick="location.href='examGrade.html';" value="Grade Exam">
+            </div>
+        </div>
+        <div class="righthalf">
+            <div class="center">
+                Click here to create a new exam. <br>
+                <input type="button" class="button" onclick="location.href='examMake.html';" value="Make Exams">
+            </div>
+        </div>
+    </body>
+</html>
